@@ -30,9 +30,16 @@ void draw()
       int lightLevel = new Integer(val);
       for (int i = 0; i < pinAmt; i++) {
         lightVals[i] = (lightLevel & (1 << i)) > 0;
-        println(lightLevel);
-        // Displays the image at its actual size at point (0,0)
-        //image(img, 0, 0);
+      }
+      drawLasers(lightVals);
     }
+    
+}
+
+void drawLasers(boolean[] lights) {
+  for (int i = 0; i < lights.length; i++) {
+    char on = lights[i] ? 'O' : 'X';
+    print(on);
   }
+  println();
 }
