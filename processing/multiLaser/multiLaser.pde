@@ -8,7 +8,7 @@ int pinAmt = 5;
 
 void setup() {
   //Still unsure how to programatically detemine a port for the Arduino
-  String portName = "//dev//ttyUSB0";//Serial.list()[2];
+  String portName = "//dev//tty.usbserial-A800etuF";//Serial.list()[2];
   myPort = new Serial(this, portName, 9600); 
   
   size(640, 480);
